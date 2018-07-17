@@ -9,13 +9,13 @@
 
     <TextView
         android:id="@+id/lblPergunta"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="115dp"
         android:layout_marginTop="41dp"
         android:text="PERGUNTA"
         android:textColor="@android:color/black"
-        android:textSize="32sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/lblResp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,30 +24,50 @@
 
     <TextView
         android:id="@+id/lblResp"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="150dp"
+        android:layout_marginBottom="91dp"
         android:text="RESPOSTA"
         android:textColor="@android:color/black"
-        android:textSize="32sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnProx"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblPergunta" />
 
-    <ImageButton
-        android:id="@+id/btnProx"
-        android:layout_width="227dp"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="61dp"
-        android:layout_marginStart="61dp"
-        android:background="@android:color/white"
-        android:onClick="proximaPergunta"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblResp"
-        app:srcCompat="@drawable/next" />
+        app:layout_constraintTop_toBottomOf="@+id/button">
+
+        <ImageButton
+            android:id="@+id/btnProx"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:onClick="proximaPergunta"
+            app:srcCompat="@drawable/next"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:onClick="mostrarResp"
+        android:text="Mostrar Resposta"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblResp" />
 
 </android.support.constraint.ConstraintLayout>

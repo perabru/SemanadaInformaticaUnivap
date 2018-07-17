@@ -35,6 +35,7 @@ public class Game extends AppCompatActivity {
                 //Log.i("Results - resp", cursor.getString(respIndex));
 
                 lblPergunta.setText(cursor.getString(piadaIndex));
+                lblResp.setVisibility(View.INVISIBLE);
                 lblResp.setText(cursor.getString(respIndex));
 
                 cursor.moveToNext();
@@ -46,6 +47,11 @@ public class Game extends AppCompatActivity {
 
 
 
+    }
+
+
+    public void mostrarResp(View view){
+        lblResp.setVisibility(View.VISIBLE);
     }
 
     @Override
@@ -111,6 +117,7 @@ public class Game extends AppCompatActivity {
                 //Log.i("Results - resp", cursor.getString(respIndex));
 
                 lblPergunta.setText(cursor.getString(piadaIndex));
+                lblResp.setVisibility(View.INVISIBLE);
                 lblResp.setText(cursor.getString(respIndex));
 
                 cursor.moveToNext();

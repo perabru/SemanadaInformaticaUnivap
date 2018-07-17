@@ -90,6 +90,10 @@ public class Game extends AppCompatActivity {
             semanaInfoDB.execSQL("INSERT INTO perguntas (piada, resp) VALUES ( 'Por que o Homem-Aranha não vai ao Xuxa Park?','Porque tem medo de encontrar duendes.')");
             semanaInfoDB.execSQL("INSERT INTO perguntas (piada, resp) VALUES ( 'Acaba a luz do cinema em Tron, o legado. O que o filme vira?','Troff, o deslegado.')");
             semanaInfoDB.execSQL("INSERT INTO perguntas (piada, resp) VALUES ( 'Como se chamará o próximo filme do Hulk?','Hulk 2 – Vale a pena verde novo.')");
+            semanaInfoDB.execSQL("INSERT INTO perguntas (piada, resp) VALUES ( 'Qual é a banda favorita do professor Xavier?','Os Mutantes.')");
+            semanaInfoDB.execSQL("INSERT INTO perguntas (piada, resp) VALUES ( 'Qual é o herói mais metal na veia?','Wolverine')");
+            semanaInfoDB.execSQL("INSERT INTO perguntas (piada, resp) VALUES ( 'Por que a Hera Venenosa foi ao show do Ritchie?','Porque ela adora Menina Veneno')");
+            semanaInfoDB.execSQL("INSERT INTO perguntas (piada, resp) VALUES ( 'Quem é o maior vilão do Flash?','Steve Jobs')");
 
             Cursor cursor = semanaInfoDB.rawQuery("SELECT * FROM perguntas ORDER BY RANDOM() LIMIT 1", null);
 
